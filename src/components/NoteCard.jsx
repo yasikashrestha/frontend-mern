@@ -1,7 +1,9 @@
 import { memo } from 'react';
+import{Pencil,Trash2} from 'lucide-react'
 import "./NoteCard.css";
 const NoteCard = ({ note, onEdit, onDelete }) => {
-    const formData = (datestring) =>{
+    
+    const formatDate = (datestring) =>{
         return new Date(datestring).toLocaleDateString('en-US',{
             month: 'short',
             day: 'numeric',
